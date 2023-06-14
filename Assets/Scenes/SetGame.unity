@@ -616,8 +616,9 @@ GameObject:
   - component: {fileID: 790867346}
   - component: {fileID: 790867345}
   - component: {fileID: 790867344}
+  - component: {fileID: 790867347}
   m_Layer: 5
-  m_Name: E20Pairs
+  m_Name: 20PairsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +688,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 790867345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 790867347}
+        m_TargetAssemblyTypeName: SetGameButton, Assembly-CSharp
+        m_MethodName: SetGameOption
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &790867345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +739,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790867342}
   m_CullTransparentMesh: 1
+--- !u!114 &790867347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790867342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5696f479a238845a6de06eb7de35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonType: 1
+  PairNumber: 20
+  PuzzleCategories: 0
 --- !u!1 &923736708
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,8 +766,9 @@ GameObject:
   - component: {fileID: 923736712}
   - component: {fileID: 923736711}
   - component: {fileID: 923736710}
+  - component: {fileID: 923736713}
   m_Layer: 5
-  m_Name: Hiragana
+  m_Name: HiraganaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,7 +838,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 923736711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923736713}
+        m_TargetAssemblyTypeName: SetGameButton, Assembly-CSharp
+        m_MethodName: SetGameOption
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &923736711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +889,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923736708}
   m_CullTransparentMesh: 1
+--- !u!114 &923736713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923736708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5696f479a238845a6de06eb7de35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonType: 2
+  PairNumber: 0
+  PuzzleCategories: 1
 --- !u!1 &1076650625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1284,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214803931}
   m_CullTransparentMesh: 1
+--- !u!1 &1225695720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225695722}
+  - component: {fileID: 1225695721}
+  m_Layer: 0
+  m_Name: '[GameSettings]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1225695721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225695720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2c06314140a7542aff2f2b8eee1e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1225695722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225695720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -34.09845, y: 1.8594723, z: 54.052612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384899940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,8 +1340,9 @@ GameObject:
   - component: {fileID: 1384899944}
   - component: {fileID: 1384899943}
   - component: {fileID: 1384899942}
+  - component: {fileID: 1384899945}
   m_Layer: 5
-  m_Name: E15Pairs
+  m_Name: 15PairsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1311,7 +1412,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384899943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1384899945}
+        m_TargetAssemblyTypeName: SetGameButton, Assembly-CSharp
+        m_MethodName: SetGameOption
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384899943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,6 +1463,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384899940}
   m_CullTransparentMesh: 1
+--- !u!114 &1384899945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384899940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5696f479a238845a6de06eb7de35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonType: 1
+  PairNumber: 15
+  PuzzleCategories: 0
 --- !u!1 &1419972355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,8 +1490,9 @@ GameObject:
   - component: {fileID: 1419972359}
   - component: {fileID: 1419972358}
   - component: {fileID: 1419972357}
+  - component: {fileID: 1419972360}
   m_Layer: 5
-  m_Name: Katakana
+  m_Name: KatakanaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1419972358}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1419972360}
+        m_TargetAssemblyTypeName: SetGameButton, Assembly-CSharp
+        m_MethodName: SetGameOption
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1419972358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1613,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419972355}
   m_CullTransparentMesh: 1
+--- !u!114 &1419972360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419972355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5696f479a238845a6de06eb7de35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonType: 2
+  PairNumber: 0
+  PuzzleCategories: 2
 --- !u!1 &1437384421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1949,7 @@ GameObject:
   - component: {fileID: 1521635609}
   - component: {fileID: 1521635608}
   m_Layer: 5
-  m_Name: GoBackButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2019,8 +2175,9 @@ GameObject:
   - component: {fileID: 1802229564}
   - component: {fileID: 1802229563}
   - component: {fileID: 1802229562}
+  - component: {fileID: 1802229565}
   m_Layer: 5
-  m_Name: E10Pairs
+  m_Name: 10PairsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2090,7 +2247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1802229563}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1802229565}
+        m_TargetAssemblyTypeName: SetGameButton, Assembly-CSharp
+        m_MethodName: SetGameOption
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1802229563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,6 +2298,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802229560}
   m_CullTransparentMesh: 1
+--- !u!114 &1802229565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802229560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5696f479a238845a6de06eb7de35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonType: 1
+  PairNumber: 10
+  PuzzleCategories: 0
 --- !u!1 &1923461613
 GameObject:
   m_ObjectHideFlags: 0
