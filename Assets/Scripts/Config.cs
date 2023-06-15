@@ -19,14 +19,14 @@ public class Config : MonoBehaviour
 
     private static readonly int NumberOfScoreRecords = 10;
 
-    private static float[] ScoreTimeList10Pairs = new float[NumberOfScoreRecords];
-    private static string[] PairNumberList10Pairs = new string[NumberOfScoreRecords];
+    public static float[] ScoreTimeList10Pairs = new float[NumberOfScoreRecords];
+    public static string[] PairNumberList10Pairs = new string[NumberOfScoreRecords];
 
-    private static float[] ScoreTimeList15Pairs = new float[NumberOfScoreRecords];
-    private static string[] PairNumberList15Pairs = new string[NumberOfScoreRecords];
+    public static float[] ScoreTimeList15Pairs = new float[NumberOfScoreRecords];
+    public static string[] PairNumberList15Pairs = new string[NumberOfScoreRecords];
 
-    private static float[] ScoreTimeList20Pairs = new float[NumberOfScoreRecords];
-    private static string[] PairNumberList20Pairs = new string[NumberOfScoreRecords];
+    public static float[] ScoreTimeList20Pairs = new float[NumberOfScoreRecords];
+    public static string[] PairNumberList20Pairs = new string[NumberOfScoreRecords];
 
     private static bool _bestScore = false;
 
