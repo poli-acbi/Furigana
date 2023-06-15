@@ -9,4 +9,9 @@ public class ButtonBehavior : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void ResetGameSettings()
+    {
+        GameSettings.Instance.ResetGameSettings();
+    }
 }
