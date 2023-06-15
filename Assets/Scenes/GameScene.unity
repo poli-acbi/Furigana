@@ -377,7 +377,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 6.68
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -401,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786559093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -57.4}
+  m_LocalPosition: {x: 0.1, y: 5.6, z: -48.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,17 +586,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212723147}
   m_CullTransparentMesh: 1
---- !u!114 &1512894217 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4824969643248427359, guid: eca57f75ebed5f24cb63be9eb8143ec4, type: 3}
-  m_PrefabInstance: {fileID: 7744532648676470741}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ea764d3d2b7e74e8138edcf080c79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1898016568
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc3c97856fa52348b86ebc89788d105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PicturePrefab: {fileID: 1512894217}
+  PicturePrefab: {fileID: 4824969643248427359, guid: eca57f75ebed5f24cb63be9eb8143ec4, type: 3}
   PicSpawnPosition: {fileID: 43254046}
   StartPosition: {x: -2.15, y: 3.62}
   PictureList: []
@@ -638,7 +627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898016568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 359.73157, y: -197.5769, z: 1390.0308}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -703,7 +692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4899089991162625198, guid: eca57f75ebed5f24cb63be9eb8143ec4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

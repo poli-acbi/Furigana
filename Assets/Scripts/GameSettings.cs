@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameSettings : MonoBehaviour
 {
+    private readonly Dictionary<EPuzzleCategories, string> _puzzleCatDirectory = new Dictionary<EPuzzleCategories, string>();
     private int _settings;
     private const int SettingsNumber = 2;
 
@@ -49,8 +50,15 @@ public class GameSettings : MonoBehaviour
 
     void Start()
     {
+        SetPuzzleCatDirectory();
         _gameSettings = new Settings();
         ResetGameSettings();
+    }
+
+    private void SetPuzzleCatDirectory()
+    {
+        _puzzleCatDirectory.Add(EPuzzleCategories.Hiragana, "Hiragana");
+        _puzzleCatDirectory.Add(EPuzzleCategories.Katakana, "Katakana");
     }
 
     public void SetPairNumber(EPairNumber Number)
@@ -89,5 +97,23 @@ public class GameSettings : MonoBehaviour
     public bool AllSettingsReady()
     {
         return _settings == SettingsNumber;
+    }
+
+    public string GetMaterialDirectoryName()
+    {
+        return "Materials/";
+    }
+
+    public string GetPuzzleCategoryTextureDirectoryName()
+    {
+        if(_puzzleCatDirectory.ContainsKey(_gameSettings.PuzzleCategory))
+        {
+            return "Images/PuzzleCat/" + _puzzleCatDirectory[_gameSettings.PuzzleCategory] + "/";
+        }
+        else
+        {
+            Debug.LogError("ERRO");
+            return "";
+        }
     }
 }
