@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public Text[] scoresText_10Pairs;
-    public Text[] dateText_10Pairs;
+    public TMP_Text[] scoresText_10Pairs;
+    public TMP_Text[] dateText_10Pairs;
 
-    public Text[] scoresText_15Pairs;
-    public Text[] dateText_15Pairs;
+    public TMP_Text[] scoresText_15Pairs;
+    public TMP_Text[] dateText_15Pairs;
 
-    public Text[] scoresText_20Pairs;
-    public Text[] dateText_20Pairs;
+    public TMP_Text[] scoresText_20Pairs;
+    public TMP_Text[] dateText_20Pairs;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class ScoreBoard : MonoBehaviour
         DisplayPairsScoreData(Config.ScoreTimeList20Pairs, Config.PairNumberList20Pairs, scoresText_20Pairs, dateText_20Pairs);
     }
 
-    private void DisplayPairsScoreData(float[] scoreTimeList, string[] pairNumberList, Text[] scoreText, Text[] dataText)
+    private void DisplayPairsScoreData(float[] scoreTimeList, string[] pairNumberList, TMP_Text[] scoreText, TMP_Text[] dataText)
     {
         for (var index = 0; index < 3; index++)
         {

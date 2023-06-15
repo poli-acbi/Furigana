@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PictureManager : MonoBehaviour
 {
@@ -193,7 +194,7 @@ public class PictureManager : MonoBehaviour
         const string matBaseName = "pic";
         var firstMaterialName = "Back";
 
-        for (var index = 1; index < pairNumber; index++)
+        for (var index = 1; index <= pairNumber; index++)
         {
             var currentFilePath = materialFilePath + matBaseName + index;
             Material mat = Resources.Load(currentFilePath, typeof(Material)) as Material;
@@ -268,7 +269,8 @@ public class PictureManager : MonoBehaviour
         var minutes = Mathf.Floor(timer / 60);
         var seconds = Mathf.RoundToInt(timer % 60);
         var newText = minutes.ToString("00") + ":" + seconds.ToString("00");
-        EndTimeText.GetComponent<Text>().text = newText;
+        EndTimeText.GetComponent<TMP_Text>().text = newText;
+        Debug.Log("Text Enter");
     }
 
     private void SpawnPictureMesh(int rows, int columns, Vector2 Pos, Vector2 offset, bool scaleDown)
