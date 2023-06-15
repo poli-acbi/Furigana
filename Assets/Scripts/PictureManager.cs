@@ -10,7 +10,7 @@ public class PictureManager : MonoBehaviour
     public Vector2 StartPosition = new Vector2(-2.15f, 3.62f);
 
     [Space]
-    [Header("EndGameScreen")]
+    [Header("End Game Screen")]
     public GameObject EndGamePanel;
 
     public GameObject NewBestScoreText;
@@ -242,6 +242,7 @@ public class PictureManager : MonoBehaviour
         {
             CurrentGameState = GameState.GameEnd;
             _gameTimer.StopTimer();
+            Config.PlaceScoreOnBoard(_gameTimer.GetCurrentTime());
         }
 
         return (CurrentGameState == GameState.GameEnd);
@@ -250,7 +251,18 @@ public class PictureManager : MonoBehaviour
     private void ShowEndGameInformation()
     {
         EndGamePanel.SetActive(true);
-        YourScoreText.SetActive(true);
+
+        if(Config.IsBestScore())
+        {
+            NewBestScoreText.SetActive(true);
+            YourScoreText.SetActive(false);
+        }
+
+        else
+        {
+            NewBestScoreText.SetActive(false);
+            YourScoreText.SetActive(true);
+        }
 
         var timer = _gameTimer.GetCurrentTime();
         var minutes = Mathf.Floor(timer / 60);
