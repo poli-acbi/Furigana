@@ -36,7 +36,7 @@ public class Picture : MonoBehaviour
         
     }
 
-    private void  OnMouseDown()
+    public void OnMouseDown()
     {
         StartCoroutine(LoopRotation(45, false));
     }
